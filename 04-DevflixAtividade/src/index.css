@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONFIGURAÇÕES BASE */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* ESTILOS GLOBAIS */
+body {
+  font-family: var(--font-raleway), Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* IMAGENS */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* BOTÕES */
+button {
+  font-family: var(--font-raleway);
+}
+
+/* ESTILO DO RODAPÉ */
+footer {
+  padding: 12px;
+  text-align: center;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* SCROLLBAR PERSONALIZADA */
+
+/* Chrome / Edge */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+/* SELEÇÃO DE TEXTO */
+::selection {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* ROOT DO REACT */
+#root {
+  min-height: 100vh;
+}

@@ -1,0 +1,9 @@
+.containerApp {
+  min-height: 85vh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

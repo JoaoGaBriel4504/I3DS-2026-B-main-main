@@ -16,7 +16,7 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server, {
   // CORS (cross-origin resource sharing) permite que clientes de outros dominios/IPs se conectem
   // Altere o IP para o IP da maquina onde o servidor esta rodando
-  cors: { origin: "http://localhost:3000" },
+  cors: { origin: "*" },
   // Exemplo: "http://localhost:5173" para desenvolvimento local
   // Exemplo: "http://seu-ip:5173" para rede
   origin: "http://localhost:5173",

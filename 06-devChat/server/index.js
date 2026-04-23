@@ -41,7 +41,7 @@ io.on("connection", (socket) => {
     socket.data.username = username;
     console.log(`Usuario conectado: ${username} (ID: ${socket.id})`);
     // Registra no console que um usuario se conectou
-    username(username, socket.id);
+    userName(username, socket.id);
   });
 
   //=====================================
@@ -75,7 +75,7 @@ io.on("connection", (socket) => {
 });
 
 // Registra no console quando um novo usuario se conecta
-const username = (username, id) => {
+const userName = (username, id) => {
   console.log(`Usuario ${username} conectado com o seguinte id: ${id}`);
 };
 

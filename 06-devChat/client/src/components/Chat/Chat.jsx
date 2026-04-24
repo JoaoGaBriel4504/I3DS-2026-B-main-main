@@ -2,7 +2,7 @@ import style from "./Chat.module.css";
 
 import { Input } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
-import { use, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Chat = (props) => {
   const [messageList, setMessageList] = useState([]);
@@ -18,6 +18,8 @@ const Chat = (props) => {
       // usa função callback para garantir que pega o estado mais recente
       setMessageList((current) => [...current, data]);
     });
+
+    messageRef.current.focus();
 
     // Cleanup: remover o listener quando o componente desmonta
     // Evita vazamento de memória e listeners duplicados
@@ -44,7 +46,7 @@ const Chat = (props) => {
   }, [messageList]);
 
   const scrollDown = () => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    bottomRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -63,7 +65,7 @@ const Chat = (props) => {
             </div>
           ))}
 
-          <div ref={bottomRef}></div>
+          <div ref={bottomRef} />
         </div>
 
         <div className={style.chat_footer}>
